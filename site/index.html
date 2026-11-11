@@ -105,9 +105,28 @@
   .tags span:nth-child(3){border-color:var(--c3);color:var(--c3)} .tags span:nth-child(4){border-color:var(--c4);color:var(--c4)}
   .tags span:nth-child(5){border-color:var(--c2);color:var(--c2)}
   .rainbow{height:3px;background:var(--grad);margin:40px 0 0;border-radius:3px;opacity:.9}
+
+  .squig{position:fixed;top:0;bottom:0;width:22px;z-index:2;pointer-events:none;opacity:.85}
+  .squig.l{left:0} .squig.r{right:0;transform:scaleX(-1)}
+  .squig svg{width:100%;height:100%;display:block}
+  .squig path{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:14 0;animation:wig 6s ease-in-out infinite alternate}
+  .squig path:nth-child(2){stroke-width:1.4;opacity:.55;animation-delay:-3s}
+  @keyframes wig{to{transform:translateY(-60px)}}
+  @media (min-width:760px){.squig{width:60px}}
+  @media (max-width:759px){article{padding-left:34px!important;padding-right:34px!important}.bar .in,footer{padding-left:34px!important;padding-right:34px!important}}
 </style>
 </head>
 <body>
+<div class="squig l" aria-hidden="true"><svg viewBox="0 0 26 2200" preserveAspectRatio="none">
+<defs><linearGradient id="rbL" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#ff6b6b"/><stop offset=".2" stop-color="#ffb547"/><stop offset=".4" stop-color="#6ee7a8"/>
+<stop offset=".6" stop-color="#5ac8fa"/><stop offset=".8" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs>
+<path stroke="url(#rbL)" d="M11 -120 Q20 -60.0 11 0 Q2 60.0 11 120 Q20 180.0 11 240 Q2 300.0 11 360 Q20 420.0 11 480 Q2 540.0 11 600 Q20 660.0 11 720 Q2 780.0 11 840 Q20 900.0 11 960 Q2 1020.0 11 1080 Q20 1140.0 11 1200 Q2 1260.0 11 1320 Q20 1380.0 11 1440 Q2 1500.0 11 1560 Q20 1620.0 11 1680 Q2 1740.0 11 1800 Q20 1860.0 11 1920 Q2 1980.0 11 2040 Q20 2100.0 11 2160 Q2 2220.0 11 2280 Q20 2340.0 11 2400"/><path stroke="url(#rbL)" d="M13 -80 Q19 5.0 13 90 Q7 175.0 13 260 Q19 345.0 13 430 Q7 515.0 13 600 Q19 685.0 13 770 Q7 855.0 13 940 Q19 1025.0 13 1110 Q7 1195.0 13 1280 Q19 1365.0 13 1450 Q7 1535.0 13 1620 Q19 1705.0 13 1790 Q7 1875.0 13 1960 Q19 2045.0 13 2130 Q7 2215.0 13 2300 Q19 2385.0 13 2470"/></svg></div>
+<div class="squig r" aria-hidden="true"><svg viewBox="0 0 26 2200" preserveAspectRatio="none">
+<defs><linearGradient id="rbR" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#ff6b6b"/><stop offset=".2" stop-color="#ffb547"/><stop offset=".4" stop-color="#6ee7a8"/>
+<stop offset=".6" stop-color="#5ac8fa"/><stop offset=".8" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs>
+<path stroke="url(#rbR)" d="M11 -90 Q20 -25.0 11 40 Q2 105.0 11 170 Q20 235.0 11 300 Q2 365.0 11 430 Q20 495.0 11 560 Q2 625.0 11 690 Q20 755.0 11 820 Q2 885.0 11 950 Q20 1015.0 11 1080 Q2 1145.0 11 1210 Q20 1275.0 11 1340 Q2 1405.0 11 1470 Q20 1535.0 11 1600 Q2 1665.0 11 1730 Q20 1795.0 11 1860 Q2 1925.0 11 1990 Q20 2055.0 11 2120 Q2 2185.0 11 2250 Q20 2315.0 11 2380 Q2 2445.0 11 2510"/><path stroke="url(#rbR)" d="M13 -120 Q19 -25.0 13 70 Q7 165.0 13 260 Q19 355.0 13 450 Q7 545.0 13 640 Q19 735.0 13 830 Q7 925.0 13 1020 Q19 1115.0 13 1210 Q7 1305.0 13 1400 Q19 1495.0 13 1590 Q7 1685.0 13 1780 Q19 1875.0 13 1970 Q7 2065.0 13 2160 Q19 2255.0 13 2350 Q7 2445.0 13 2540"/></svg></div>
 <div class="bar"><div class="in"><span class="logo">Field Notes</span><span class="nav"><span>Science</span><span>Culture</span><span>Health</span></span></div><div class="progress" id="pg"></div></div>
 
 <article>
