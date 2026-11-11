@@ -3,145 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>how to get a 4.0</title>
-<meta name="description" content="The study system: methods that work, free tools, and the rules nobody tells you.">
+<title>What Science Says About Gay Men | Field Notes</title>
+<meta name="description" content="Genes, birth order, twin studies and history: what researchers actually know about sexual orientation in men.">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#000;--fg:#f5f5f2;--dim:#8a8a86;--line:#1f1f1e;--card:#0b0b0b}
+  :root{--bg:#000;--fg:#f3f3ef;--body:#d6d6d1;--dim:#85857f;--line:#202020}
   *{box-sizing:border-box;margin:0;padding:0}
   html{background:var(--bg);-webkit-text-size-adjust:100%}
-  body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;font-weight:300;line-height:1.55;
-       -webkit-font-smoothing:antialiased;overflow-x:hidden}
-  body::before{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;opacity:.07;
-       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-       animation:grain 1.2s steps(6) infinite}
-  @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
-  .wrap{max-width:560px;margin:0 auto;padding:0 22px}
-  .mono{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  .serif{font-family:"Instrument Serif",serif;font-weight:400}
+  body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .bar{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar .in{max-width:680px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 22px 14px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:"Instrument Serif",serif;font-size:24px;letter-spacing:-.01em}
+  .nav{font-size:12px;color:var(--dim);display:flex;gap:16px}
+  .progress{position:absolute;left:0;bottom:-1px;height:1px;background:var(--fg);width:0}
 
-  header{position:sticky;top:0;z-index:10;background:linear-gradient(#000 70%,transparent);padding:calc(16px + env(safe-area-inset-top)) 0 18px}
-  header .wrap{display:flex;justify-content:space-between;align-items:center}
-  .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--fg);margin-right:8px;animation:blink 2s ease-in-out infinite;vertical-align:1px}
-  @keyframes blink{50%{opacity:.2}}
+  article{max-width:680px;margin:0 auto;padding:44px 22px 80px}
+  .kicker{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(44px,11vw,72px);line-height:.98;letter-spacing:-.015em;margin:16px 0 18px}
+  h1 em{font-style:italic;color:#bdbdb7}
+  .dek{font-family:"Source Serif 4",Georgia,serif;font-size:20px;line-height:1.45;color:#c9c9c4;font-weight:300}
+  .meta{display:flex;align-items:center;gap:12px;margin:26px 0 30px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;color:var(--dim)}
+  .av{width:34px;height:34px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:grid;place-items:center;font-family:"Instrument Serif",serif;font-size:17px;color:var(--fg)}
+  .meta b{color:var(--fg);font-weight:500;display:block}
 
-  .hero{min-height:88vh;min-height:88svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px}
-  .hero h1{font-size:clamp(64px,19vw,112px);line-height:.86;letter-spacing:-.02em}
-  .hero h1 em{font-style:italic}
-  .hero p{margin-top:28px;font-size:17px;color:#cfcfca;max-width:30ch}
-  .hero p.mono{margin-top:0;font-size:11px;color:var(--dim);max-width:none}
-  .scroll{margin-top:56px;display:flex;align-items:center;gap:12px}
-  .scroll span.bar{width:1px;height:46px;background:linear-gradient(var(--fg),transparent);animation:drop 1.8s ease-in-out infinite;transform-origin:top}
-  @keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+  .hero{aspect-ratio:16/10;border-radius:4px;margin-bottom:34px;position:relative;overflow:hidden;
+        background:radial-gradient(120% 90% at 20% 15%,#2a2a2a 0%,#0d0d0d 55%,#000 100%)}
+  .hero svg{position:absolute;inset:0;width:100%;height:100%}
+  .cap{font-size:12px;color:var(--dim);margin:-24px 0 34px}
 
-  section{padding:72px 0;border-top:1px solid var(--line)}
-  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:34px}
-  h2{font-size:44px;line-height:1;letter-spacing:-.01em}
-  h2 em{font-style:italic;color:var(--dim)}
-
-  ol.list{list-style:none}
-  ol.list li{display:grid;grid-template-columns:38px 1fr;gap:6px 10px;padding:20px 0;border-bottom:1px solid var(--line)}
-  ol.list li:last-child{border-bottom:0}
-  ol.list .n{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--dim);padding-top:5px}
-  ol.list h3{font-weight:500;font-size:17px;letter-spacing:-.005em}
-  ol.list p{grid-column:2;color:#b9b9b4;font-size:15px}
-
-  .tools{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .tool{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 15px 15px}
-  .tool b{display:block;font-weight:500;font-size:15px;margin-bottom:4px}
-  .tool span{font-size:13px;color:#a3a39e;line-height:1.45;display:block}
-  .tool .tag{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
-
-  .feature{margin-top:10px;grid-column:1/-1;background:var(--fg);color:#000;border-radius:18px;padding:24px 22px 22px;position:relative;overflow:hidden}
-  .feature .tag{color:#555}
-  .feature h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:40px;line-height:1;margin:8px 0 10px}
-  .feature p{font-size:15px;color:#2a2a2a;max-width:34ch}
-  .feature a{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:#000;color:#fff;text-decoration:none;
-             font-size:14px;font-weight:500;padding:12px 18px;border-radius:999px}
-  .feature .scan{position:absolute;left:0;right:0;height:40%;top:-40%;background:linear-gradient(transparent,rgba(0,0,0,.06),transparent);animation:scan 3.2s linear infinite}
-  @keyframes scan{to{top:100%}}
-
-  .rules p{font-family:"Instrument Serif",serif;font-size:30px;line-height:1.15;padding:18px 0;border-bottom:1px solid var(--line)}
-  .rules p:last-child{border:0}
-  .rules p em{color:var(--dim)}
-
-  footer{border-top:1px solid var(--line);padding:56px 0 calc(56px + env(safe-area-inset-bottom))}
-  footer h2{font-size:56px}
-  footer .row{display:flex;justify-content:space-between;margin-top:36px}
-  footer a{color:var(--fg)}
-
-  .r{opacity:0;transform:translateY(18px);filter:blur(4px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
-  .r.in{opacity:1;transform:none;filter:none}
-  .hero .r{transition-duration:1.2s}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important}.r{opacity:1;transform:none;filter:none}}
+  .prose p{font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.7;color:var(--body);font-weight:350;margin-bottom:22px}
+  .prose p:first-of-type::first-letter{font-family:"Instrument Serif",serif;float:left;font-size:78px;line-height:.82;padding:8px 10px 0 0;color:var(--fg)}
+  .prose h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1.05;color:var(--fg);margin:44px 0 16px}
+  .prose strong{color:var(--fg);font-weight:500}
+  blockquote{margin:36px 0;padding-left:20px;border-left:2px solid var(--fg);font-family:"Instrument Serif",serif;font-size:30px;line-height:1.2;color:var(--fg)}
+  blockquote span{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--dim);margin-top:12px;letter-spacing:.04em}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0}
+  .stat{background:#000;padding:20px 16px}
+  .stat b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:42px;line-height:1;color:var(--fg)}
+  .stat span{display:block;font-size:13px;color:var(--dim);margin-top:8px;line-height:1.4}
+  .timeline{margin:10px 0 30px;border-left:1px solid #333;padding-left:20px}
+  .timeline div{position:relative;padding:0 0 18px}
+  .timeline div::before{content:"";position:absolute;left:-24px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--fg)}
+  .timeline b{font-family:"Instrument Serif",serif;font-weight:400;font-size:24px;color:var(--fg);margin-right:8px}
+  .timeline span{font-family:"Source Serif 4",Georgia,serif;font-size:17px;color:var(--body)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+  .tags span{font-size:12px;border:1px solid #333;border-radius:999px;padding:6px 12px;color:#bbb}
+  footer{max-width:680px;margin:0 auto;padding:30px 22px calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
 </style>
 </head>
 <body>
-<header><div class="wrap"><span class="mono"><span class="dot"></span>howtogeta4.0</span><span class="mono" id="clock">--:--</span></div></header>
+<div class="bar"><div class="in"><span class="logo">Field Notes</span><span class="nav"><span>Science</span><span>Culture</span><span>Health</span></span></div><div class="progress" id="pg"></div></div>
 
-<main class="wrap">
-  <div class="hero">
-    <p class="mono r">the study system · vol. 01</p>
-    <h1 class="serif r" style="margin-top:18px">how to<br>get a <em>4.0</em></h1>
-    <p class="r">Straight-A students aren't studying more than you. They're studying differently. Here's the whole system.</p>
-    <div class="scroll mono r"><span class="bar"></span>scroll</div>
+<article>
+  <div class="kicker">Science · Identity</div>
+  <h1>What science actually says about <em>gay men</em></h1>
+  <p class="dek">Genes, older brothers, twin studies and a century of history. Here is what researchers know about sexual orientation in men, and what they still don't.</p>
+  <div class="meta"><div class="av">M</div><div><b>Marcus Hale</b>November 11, 2026 · 7 min read</div></div>
+
+  <div class="hero" aria-hidden="true">
+    <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+      <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity=".15"/></linearGradient></defs>
+      <g fill="none" stroke="url(#g)" stroke-width="1.2">
+        <path d="M60 250 C 200 60, 320 440, 460 250 S 700 60, 760 250"/>
+        <path d="M60 250 C 200 440, 320 60, 460 250 S 700 440, 760 250" stroke-opacity=".6"/>
+      </g>
+      <g stroke="#fff" stroke-opacity=".25">
+        <line x1="130" y1="150" x2="130" y2="350"/><line x1="200" y1="110" x2="200" y2="390"/><line x1="270" y1="150" x2="270" y2="350"/>
+        <line x1="530" y1="150" x2="530" y2="350"/><line x1="600" y1="110" x2="600" y2="390"/><line x1="670" y1="150" x2="670" y2="350"/>
+      </g>
+      <circle cx="460" cy="250" r="5" fill="#fff"/>
+    </svg>
+  </div>
+  <p class="cap">There is no single "gay gene." Researchers now describe orientation as shaped by many genes and early biological factors.</p>
+
+  <div class="prose">
+    <p>For most of the last century, being a gay man was treated as a crime, a sin or a mental illness, depending on who you asked. Today, the scientific picture is much clearer, and in many ways more interesting than either side of the old debate expected.</p>
+
+    <p>In the United States, the share of adults who identify as LGBTQ+ has more than doubled since 2012. According to <strong>Gallup, 9.3% of US adults identified as LGBTQ+ in 2024</strong>, with the number far higher among Gen Z than among older generations.</p>
+
+    <div class="stats">
+      <div class="stat"><b>9.3%</b><span>of US adults identified as LGBTQ+ in 2024 (Gallup)</span></div>
+      <div class="stat"><b>1973</b><span>year the American Psychiatric Association removed homosexuality from the DSM</span></div>
+      <div class="stat"><b>~33%</b><span>higher odds of being gay with each older biological brother</span></div>
+      <div class="stat"><b>477k</b><span>people in the largest genetic study of same-sex behavior, published in 2019</span></div>
+    </div>
+
+    <h2>It isn't a choice</h2>
+    <p>The American Psychiatric Association removed homosexuality from its diagnostic manual in 1973. The World Health Organization followed in 1990, removing it from the International Classification of Diseases. Every major medical organization now agrees that sexual orientation is not a disorder and cannot be changed through therapy.</p>
+
+    <p>So-called conversion therapy has been rejected by the American Medical Association, the American Psychological Association and the American Academy of Pediatrics. Research links it to higher rates of depression and anxiety.</p>
+
+    <blockquote>"There is no single gay gene. But there are many places in the genome that each nudge the odds a little."<span>Field Notes, summarizing Ganna et al., Science, 2019</span></blockquote>
+
+    <h2>What the genes say</h2>
+    <p>Twin studies were the first big clue. In a landmark 1991 study, J. Michael Bailey and Richard Pillard found that when one identical twin was gay, the other was gay about <strong>52% of the time</strong>, compared with about 22% for fraternal twins. Genes clearly mattered, but they weren't the whole story, or identical twins would match every time.</p>
+
+    <p>In 2019, a study in <em>Science</em> analyzed the DNA of more than 470,000 people. It found <strong>no single "gay gene."</strong> Instead, thousands of small genetic variants each had a tiny effect. All the common variants they measured together explained between 8% and 25% of the differences in same-sex behavior.</p>
+
+    <h2>The older brother effect</h2>
+    <p>One of the most replicated findings in the field is the fraternal birth order effect. Each older biological brother a man has raises his odds of being gay by roughly <strong>33%</strong>. Older sisters have no effect, and neither do adopted or step-brothers, which points to something happening before birth rather than how a boy is raised.</p>
+
+    <p>The leading explanation is the maternal immune hypothesis: a mother's immune system may respond to a protein linked to male development, and that response may grow stronger with each son. The idea was first proposed by psychologist <strong>Ray Blanchard in 1996</strong>, and a 2017 study found antibodies that fit the theory.</p>
+
+    <h2>A short history</h2>
+    <div class="timeline">
+      <div><b>1948</b><span>Alfred Kinsey publishes <em>Sexual Behavior in the Human Male</em> and introduces the 0 to 6 Kinsey scale.</span></div>
+      <div><b>1969</b><span>The Stonewall uprising in New York City becomes a turning point for the gay rights movement.</span></div>
+      <div><b>1973</b><span>The APA removes homosexuality from the DSM.</span></div>
+      <div><b>2001</b><span>The Netherlands becomes the first country to legalize same-sex marriage.</span></div>
+      <div><b>2015</b><span>The US Supreme Court legalizes same-sex marriage nationwide in <em>Obergefell v. Hodges</em>.</span></div>
+    </div>
+
+    <h2>What we still don't know</h2>
+    <p>Researchers still can't predict any one person's orientation from their genes, and they don't fully understand how genes, prenatal hormones and the birth order effect work together. Most studies have also focused on white men in Western countries, so the picture is far from complete.</p>
+
+    <p>What is clear is that sexual orientation in men is a normal variation in human biology, shaped long before anyone makes a choice about it.</p>
   </div>
 
-  <section>
-    <div class="sec-head r"><h2 class="serif">The <em>methods</em></h2><span class="mono">01</span></div>
-    <ol class="list">
-      <li class="r"><span class="n">01</span><h3>Active recall</h3><p>Close the book. Write down everything you remember, then check what you missed.</p></li>
-      <li class="r"><span class="n">02</span><h3>Spaced repetition</h3><p>Review right before you'd forget: 1 day, 3 days, a week. Anki does the scheduling.</p></li>
-      <li class="r"><span class="n">03</span><h3>Interleaving</h3><p>Mix problem types instead of doing twenty of the same one in a row.</p></li>
-      <li class="r"><span class="n">04</span><h3>Pretest yourself</h3><p>Guess the answers before you learn the topic. Getting it wrong first helps it stick.</p></li>
-      <li class="r"><span class="n">05</span><h3>The Feynman technique</h3><p>Explain it like you're talking to a 12-year-old. Where you get stuck is what you don't know.</p></li>
-      <li class="r"><span class="n">06</span><h3>Sleep on it</h3><p>Your brain saves what you learned while you sleep. All-nighters cost you more than they buy.</p></li>
-    </ol>
-  </section>
+  <div class="tags"><span>Science</span><span>LGBTQ+</span><span>Genetics</span><span>Health</span><span>History</span></div>
+</article>
 
-  <section>
-    <div class="sec-head r"><h2 class="serif">The <em>tools</em></h2><span class="mono">02</span></div>
-    <div class="tools">
-      <div class="tool r"><div class="tag">flashcards</div><b>Anki</b><span>Spaced repetition that schedules your reviews for you.</span></div>
-      <div class="tool r"><div class="tag">citations</div><b>Zotero</b><span>One click saves a source and formats the citation.</span></div>
-      <div class="tool r"><div class="tag">focus</div><b>Forest</b><span>Your tree dies if you leave to scroll.</span></div>
-      <div class="tool r"><div class="tag">math</div><b>Wolfram Alpha</b><span>Step-by-step answers and graphs.</span></div>
-      <div class="tool r"><div class="tag">papers</div><b>Unpaywall</b><span>Finds the free, legal copy of a paywalled paper.</span></div>
-      <div class="tool r"><div class="tag">textbooks</div><b>OpenStax</b><span>Full college textbooks, free.</span></div>
-      <div class="feature r">
-        <div class="scan"></div>
-        <div class="tag mono">fact-checking · free</div>
-        <h3>Falsify</h3>
-        <p>One click checks almost every claim in your essay, tells you what's true and what's not, and gives you real sources you can cite. Works on Google Docs, websites, YouTube, Reels and TikTok.</p>
-        <a href="https://falsify.io" target="_blank" rel="noopener">Get it free <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="rules">
-    <div class="sec-head r"><h2 class="serif">The <em>rules</em></h2><span class="mono">03</span></div>
-    <p class="r">Rereading feels like studying. <em>It isn't.</em></p>
-    <p class="r">Phone in another room. <em>Not face-down.</em></p>
-    <p class="r">Go to office hours before you need help.</p>
-    <p class="r">Never cite something you <em>haven't checked.</em></p>
-    <p class="r">One bad grade isn't the story. <em>The trend is.</em></p>
-  </section>
-</main>
-
-<footer><div class="wrap">
-  <h2 class="serif r">see you at<br><em>4.0</em></h2>
-  <div class="row mono r"><a href="https://instagram.com/howtogeta4.0" target="_blank" rel="noopener">@howtogeta4.0</a><span>© 2026</span></div>
-</div></footer>
+<footer><span>© 2026 Field Notes</span><span>Science · Culture · Health</span></footer>
 
 <script>
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.r').forEach((el,i)=>{ if(el.closest('.hero')) el.style.transitionDelay=(i*0.12)+'s'; io.observe(el); });
-  const c=document.getElementById('clock');
-  const tick=()=>{const d=new Date();c.textContent=d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});};
-  tick(); setInterval(tick,10000);
+  const pg=document.getElementById('pg');
+  addEventListener('scroll',()=>{const h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
 </script>
 </body>
 </html>
