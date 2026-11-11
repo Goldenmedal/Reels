@@ -53,6 +53,58 @@
   .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
   .tags span{font-size:12px;border:1px solid #333;border-radius:999px;padding:6px 12px;color:#bbb}
   footer{max-width:680px;margin:0 auto;padding:30px 22px calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+
+  :root{--c1:#ff6b6b;--c2:#ffb547;--c3:#6ee7a8;--c4:#5ac8fa;--c5:#a78bfa;--c6:#f472b6;
+        --grad:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6))}
+  body::before{content:"";position:fixed;inset:-20% -20% auto -20%;height:70vh;pointer-events:none;z-index:0;
+    background:radial-gradient(40% 50% at 15% 30%,rgba(167,139,250,.22),transparent 70%),
+               radial-gradient(35% 45% at 85% 20%,rgba(244,114,182,.18),transparent 70%),
+               radial-gradient(40% 40% at 55% 60%,rgba(90,200,250,.12),transparent 70%);
+    filter:blur(20px);animation:drift 18s ease-in-out infinite alternate}
+  @keyframes drift{to{transform:translate(4%,6%) scale(1.08)}}
+  .bar,article,footer{position:relative;z-index:1}
+  .bar{z-index:10}
+  .progress{background:var(--grad)!important;height:2px!important}
+  .kicker{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+  h1 em{background:linear-gradient(90deg,var(--c6),var(--c5),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent!important;padding-right:.08em}
+  .av{background:conic-gradient(var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6),var(--c1))!important;border:0!important;color:#000!important}
+  .hero{background:#050505!important}
+  .blob{position:absolute;border-radius:50%;filter:blur(38px);opacity:.75;mix-blend-mode:screen;animation:float 12s ease-in-out infinite alternate}
+  .b1{width:55%;height:70%;left:-8%;top:-10%;background:var(--c5)}
+  .b2{width:45%;height:60%;right:-5%;top:5%;background:var(--c6);animation-delay:-4s}
+  .b3{width:50%;height:55%;left:30%;bottom:-25%;background:var(--c4);animation-delay:-8s}
+  .b4{width:30%;height:40%;left:12%;bottom:0;background:var(--c2);opacity:.5}
+  @keyframes float{to{transform:translate(8%,-6%) scale(1.12)}}
+  .hero svg{z-index:2}
+  .stat:nth-child(1) b{color:var(--c6)} .stat:nth-child(2) b{color:var(--c2)}
+  .stat:nth-child(3) b{color:var(--c3)} .stat:nth-child(4) b{color:var(--c4)}
+  .stat{position:relative;overflow:hidden}
+  .stat::after{content:"";position:absolute;left:0;top:0;height:2px;width:100%;opacity:.8}
+  .stat:nth-child(1)::after{background:var(--c6)} .stat:nth-child(2)::after{background:var(--c2)}
+  .stat:nth-child(3)::after{background:var(--c3)} .stat:nth-child(4)::after{background:var(--c4)}
+  .prose h2{display:flex;align-items:center;gap:12px}
+  .prose h2::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;box-shadow:0 0 14px currentColor}
+  .prose h2:nth-of-type(1)::before{background:var(--c1);color:var(--c1)}
+  .prose h2:nth-of-type(2)::before{background:var(--c4);color:var(--c4)}
+  .prose h2:nth-of-type(3)::before{background:var(--c3);color:var(--c3)}
+  .prose h2:nth-of-type(4)::before{background:var(--c2);color:var(--c2)}
+  .prose h2:nth-of-type(5)::before{background:var(--c5);color:var(--c5)}
+  .prose strong{background:linear-gradient(transparent 62%,rgba(167,139,250,.35) 62%)}
+  blockquote{border-left:0!important;padding:26px 22px!important;border-radius:16px;position:relative;
+    background:linear-gradient(135deg,rgba(244,114,182,.14),rgba(90,200,250,.10));box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+  blockquote::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:3px;background:linear-gradient(var(--c6),var(--c5),var(--c4))}
+  .timeline{border-left:0!important;position:relative}
+  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:20px;width:2px;background:linear-gradient(var(--c1),var(--c2),var(--c3),var(--c4),var(--c5))}
+  .timeline div::before{left:-23px!important;width:9px!important;height:9px!important;box-shadow:0 0 12px currentColor}
+  .timeline div:nth-child(1)::before{background:var(--c1);color:var(--c1)}
+  .timeline div:nth-child(2)::before{background:var(--c2);color:var(--c2)}
+  .timeline div:nth-child(3)::before{background:var(--c3);color:var(--c3)}
+  .timeline div:nth-child(4)::before{background:var(--c4);color:var(--c4)}
+  .timeline div:nth-child(5)::before{background:var(--c5);color:var(--c5)}
+  .tags span:nth-child(1){border-color:var(--c1);color:var(--c1)} .tags span:nth-child(2){border-color:var(--c6);color:var(--c6)}
+  .tags span:nth-child(3){border-color:var(--c3);color:var(--c3)} .tags span:nth-child(4){border-color:var(--c4);color:var(--c4)}
+  .tags span:nth-child(5){border-color:var(--c2);color:var(--c2)}
+  .rainbow{height:3px;background:var(--grad);margin:40px 0 0;border-radius:3px;opacity:.9}
 </style>
 </head>
 <body>
@@ -64,7 +116,7 @@
   <p class="dek">Genes, older brothers, twin studies and a century of history. Here is what researchers know about sexual orientation in men, and what they still don't.</p>
   <div class="meta"><div class="av">M</div><div><b>Marcus Hale</b>November 11, 2026 · 7 min read</div></div>
 
-  <div class="hero" aria-hidden="true">
+  <div class="hero" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
     <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
       <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity=".15"/></linearGradient></defs>
       <g fill="none" stroke="url(#g)" stroke-width="1.2">
@@ -124,7 +176,8 @@
     <p>What is clear is that sexual orientation in men is a normal variation in human biology, shaped long before anyone makes a choice about it.</p>
   </div>
 
-  <div class="tags"><span>Science</span><span>LGBTQ+</span><span>Genetics</span><span>Health</span><span>History</span></div>
+  <div class="rainbow"></div>
+  <div class="tags" style="border-top:0"><span>Science</span><span>LGBTQ+</span><span>Genetics</span><span>Health</span><span>History</span></div>
 </article>
 
 <footer><span>© 2026 Field Notes</span><span>Science · Culture · Health</span></footer>
