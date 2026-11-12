@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Being a Gay Man | Field Notes</title>
+<meta name="description" content="A short essay on growing up, finding your people, and being yourself.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#000;--fg:#f3f3ef;--body:#d6d6d1;--dim:#85857f;--line:#202020}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--bg);-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .bar{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar .in{max-width:680px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 22px 14px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:"Instrument Serif",serif;font-size:24px;letter-spacing:-.01em}
+  .nav{font-size:12px;color:var(--dim);display:flex;gap:16px}
+  .progress{position:absolute;left:0;bottom:-1px;height:1px;background:var(--fg);width:0}
+
+  article{max-width:680px;margin:0 auto;padding:44px 22px 80px}
+  .kicker{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(44px,11vw,72px);line-height:.98;letter-spacing:-.015em;margin:16px 0 18px}
+  h1 em{font-style:italic;color:#bdbdb7}
+  .dek{font-family:"Source Serif 4",Georgia,serif;font-size:20px;line-height:1.45;color:#c9c9c4;font-weight:300}
+  .meta{display:flex;align-items:center;gap:12px;margin:26px 0 30px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;color:var(--dim)}
+  .av{width:34px;height:34px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:grid;place-items:center;font-family:"Instrument Serif",serif;font-size:17px;color:var(--fg)}
+  .meta b{color:var(--fg);font-weight:500;display:block}
+
+  .hero{aspect-ratio:16/10;border-radius:4px;margin-bottom:34px;position:relative;overflow:hidden;
+        background:radial-gradient(120% 90% at 20% 15%,#2a2a2a 0%,#0d0d0d 55%,#000 100%)}
+  .hero svg{position:absolute;inset:0;width:100%;height:100%}
+  .cap{font-size:12px;color:var(--dim);margin:-24px 0 34px}
+
+  .prose p{font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.7;color:var(--body);font-weight:350;margin-bottom:22px}
+  .prose p:first-of-type::first-letter{font-family:"Instrument Serif",serif;float:left;font-size:78px;line-height:.82;padding:8px 10px 0 0;color:var(--fg)}
+  .prose h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1.05;color:var(--fg);margin:44px 0 16px}
+  .prose strong{color:var(--fg);font-weight:500}
+  blockquote{margin:36px 0;padding-left:20px;border-left:2px solid var(--fg);font-family:"Instrument Serif",serif;font-size:30px;line-height:1.2;color:var(--fg)}
+  blockquote span{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--dim);margin-top:12px;letter-spacing:.04em}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0}
+  .stat{background:#000;padding:20px 16px}
+  .stat b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:42px;line-height:1;color:var(--fg)}
+  .stat span{display:block;font-size:13px;color:var(--dim);margin-top:8px;line-height:1.4}
+  .timeline{margin:10px 0 30px;border-left:1px solid #333;padding-left:20px}
+  .timeline div{position:relative;padding:0 0 18px}
+  .timeline div::before{content:"";position:absolute;left:-24px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--fg)}
+  .timeline b{font-family:"Instrument Serif",serif;font-weight:400;font-size:24px;color:var(--fg);margin-right:8px}
+  .timeline span{font-family:"Source Serif 4",Georgia,serif;font-size:17px;color:var(--body)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+  .tags span{font-size:12px;border:1px solid #333;border-radius:999px;padding:6px 12px;color:#bbb}
+  footer{max-width:680px;margin:0 auto;padding:30px 22px calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+
+  :root{--c1:#ff6b6b;--c2:#ffb547;--c3:#6ee7a8;--c4:#5ac8fa;--c5:#a78bfa;--c6:#f472b6;
+        --grad:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6))}
+  body::before{content:"";position:fixed;inset:-20% -20% auto -20%;height:70vh;pointer-events:none;z-index:0;
+    background:radial-gradient(40% 50% at 15% 30%,rgba(167,139,250,.22),transparent 70%),
+               radial-gradient(35% 45% at 85% 20%,rgba(244,114,182,.18),transparent 70%),
+               radial-gradient(40% 40% at 55% 60%,rgba(90,200,250,.12),transparent 70%);
+    filter:blur(20px);animation:drift 18s ease-in-out infinite alternate}
+  @keyframes drift{to{transform:translate(4%,6%) scale(1.08)}}
+  .bar,article,footer{position:relative;z-index:1}
+  .bar{z-index:10}
+  .progress{background:var(--grad)!important;height:2px!important}
+  .kicker{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+  h1 em{background:linear-gradient(90deg,var(--c6),var(--c5),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent!important;padding-right:.08em}
+  .av{background:conic-gradient(var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6),var(--c1))!important;border:0!important;color:#000!important}
+  .hero{background:#050505!important}
+  .blob{position:absolute;border-radius:50%;filter:blur(38px);opacity:.75;mix-blend-mode:screen;animation:float 12s ease-in-out infinite alternate}
+  .b1{width:55%;height:70%;left:-8%;top:-10%;background:var(--c5)}
+  .b2{width:45%;height:60%;right:-5%;top:5%;background:var(--c6);animation-delay:-4s}
+  .b3{width:50%;height:55%;left:30%;bottom:-25%;background:var(--c4);animation-delay:-8s}
+  .b4{width:30%;height:40%;left:12%;bottom:0;background:var(--c2);opacity:.5}
+  @keyframes float{to{transform:translate(8%,-6%) scale(1.12)}}
+  .hero svg{z-index:2}
+  .stat:nth-child(1) b{color:var(--c6)} .stat:nth-child(2) b{color:var(--c2)}
+  .stat:nth-child(3) b{color:var(--c3)} .stat:nth-child(4) b{color:var(--c4)}
+  .stat{position:relative;overflow:hidden}
+  .stat::after{content:"";position:absolute;left:0;top:0;height:2px;width:100%;opacity:.8}
+  .stat:nth-child(1)::after{background:var(--c6)} .stat:nth-child(2)::after{background:var(--c2)}
+  .stat:nth-child(3)::after{background:var(--c3)} .stat:nth-child(4)::after{background:var(--c4)}
+  .prose h2{display:flex;align-items:center;gap:12px}
+  .prose h2::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;box-shadow:0 0 14px currentColor}
+  .prose h2:nth-of-type(1)::before{background:var(--c1);color:var(--c1)}
+  .prose h2:nth-of-type(2)::before{background:var(--c4);color:var(--c4)}
+  .prose h2:nth-of-type(3)::before{background:var(--c3);color:var(--c3)}
+  .prose h2:nth-of-type(4)::before{background:var(--c2);color:var(--c2)}
+  .prose h2:nth-of-type(5)::before{background:var(--c5);color:var(--c5)}
+  .prose strong{background:linear-gradient(transparent 62%,rgba(167,139,250,.35) 62%)}
+  blockquote{border-left:0!important;padding:26px 22px!important;border-radius:16px;position:relative;
+    background:linear-gradient(135deg,rgba(244,114,182,.14),rgba(90,200,250,.10));box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+  blockquote::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:3px;background:linear-gradient(var(--c6),var(--c5),var(--c4))}
+  .timeline{border-left:0!important;position:relative}
+  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:20px;width:2px;background:linear-gradient(var(--c1),var(--c2),var(--c3),var(--c4),var(--c5))}
+  .timeline div::before{left:-23px!important;width:9px!important;height:9px!important;box-shadow:0 0 12px currentColor}
+  .timeline div:nth-child(1)::before{background:var(--c1);color:var(--c1)}
+  .timeline div:nth-child(2)::before{background:var(--c2);color:var(--c2)}
+  .timeline div:nth-child(3)::before{background:var(--c3);color:var(--c3)}
+  .timeline div:nth-child(4)::before{background:var(--c4);color:var(--c4)}
+  .timeline div:nth-child(5)::before{background:var(--c5);color:var(--c5)}
+  .tags span:nth-child(1){border-color:var(--c1);color:var(--c1)} .tags span:nth-child(2){border-color:var(--c6);color:var(--c6)}
+  .tags span:nth-child(3){border-color:var(--c3);color:var(--c3)} .tags span:nth-child(4){border-color:var(--c4);color:var(--c4)}
+  .tags span:nth-child(5){border-color:var(--c2);color:var(--c2)}
+  .rainbow{height:3px;background:var(--grad);margin:40px 0 0;border-radius:3px;opacity:.9}
+
+  .squig{position:fixed;top:0;bottom:0;width:22px;z-index:2;pointer-events:none;opacity:.85}
+  .squig.l{left:0} .squig.r{right:0;transform:scaleX(-1)}
+  .squig svg{width:100%;height:100%;display:block}
+  .squig path{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:14 0;animation:wig 6s ease-in-out infinite alternate}
+  .squig path:nth-child(2){stroke-width:1.4;opacity:.55;animation-delay:-3s}
+  @keyframes wig{to{transform:translateY(-60px)}}
+  @media (min-width:760px){.squig{width:60px}}
+  @media (max-width:759px){article{padding-left:34px!important;padding-right:34px!important}.bar .in,footer{padding-left:34px!important;padding-right:34px!important}}
+
+  .rb{background:linear-gradient(90deg,#ff6b6b,#ffb547,#6ee7a8,#5ac8fa,#a78bfa,#f472b6,#ff6b6b);background-size:200% 100%;
+      -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:500;animation:rbshift 6s linear infinite}
+  @keyframes rbshift{to{background-position:200% 0}}
+</style>
+</head>
+<body>
+<div class="squig l" aria-hidden="true"><svg viewBox="0 0 26 2200" preserveAspectRatio="none">
+<defs><linearGradient id="rbL" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#ff6b6b"/><stop offset=".2" stop-color="#ffb547"/><stop offset=".4" stop-color="#6ee7a8"/>
+<stop offset=".6" stop-color="#5ac8fa"/><stop offset=".8" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs>
+<path stroke="url(#rbL)" d="M11 -120 Q20 -60.0 11 0 Q2 60.0 11 120 Q20 180.0 11 240 Q2 300.0 11 360 Q20 420.0 11 480 Q2 540.0 11 600 Q20 660.0 11 720 Q2 780.0 11 840 Q20 900.0 11 960 Q2 1020.0 11 1080 Q20 1140.0 11 1200 Q2 1260.0 11 1320 Q20 1380.0 11 1440 Q2 1500.0 11 1560 Q20 1620.0 11 1680 Q2 1740.0 11 1800 Q20 1860.0 11 1920 Q2 1980.0 11 2040 Q20 2100.0 11 2160 Q2 2220.0 11 2280 Q20 2340.0 11 2400"/><path stroke="url(#rbL)" d="M13 -80 Q19 5.0 13 90 Q7 175.0 13 260 Q19 345.0 13 430 Q7 515.0 13 600 Q19 685.0 13 770 Q7 855.0 13 940 Q19 1025.0 13 1110 Q7 1195.0 13 1280 Q19 1365.0 13 1450 Q7 1535.0 13 1620 Q19 1705.0 13 1790 Q7 1875.0 13 1960 Q19 2045.0 13 2130 Q7 2215.0 13 2300 Q19 2385.0 13 2470"/></svg></div>
+<div class="squig r" aria-hidden="true"><svg viewBox="0 0 26 2200" preserveAspectRatio="none">
+<defs><linearGradient id="rbR" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#ff6b6b"/><stop offset=".2" stop-color="#ffb547"/><stop offset=".4" stop-color="#6ee7a8"/>
+<stop offset=".6" stop-color="#5ac8fa"/><stop offset=".8" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs>
+<path stroke="url(#rbR)" d="M11 -90 Q20 -25.0 11 40 Q2 105.0 11 170 Q20 235.0 11 300 Q2 365.0 11 430 Q20 495.0 11 560 Q2 625.0 11 690 Q20 755.0 11 820 Q2 885.0 11 950 Q20 1015.0 11 1080 Q2 1145.0 11 1210 Q20 1275.0 11 1340 Q2 1405.0 11 1470 Q20 1535.0 11 1600 Q2 1665.0 11 1730 Q20 1795.0 11 1860 Q2 1925.0 11 1990 Q20 2055.0 11 2120 Q2 2185.0 11 2250 Q20 2315.0 11 2380 Q2 2445.0 11 2510"/><path stroke="url(#rbR)" d="M13 -120 Q19 -25.0 13 70 Q7 165.0 13 260 Q19 355.0 13 450 Q7 545.0 13 640 Q19 735.0 13 830 Q7 925.0 13 1020 Q19 1115.0 13 1210 Q7 1305.0 13 1400 Q19 1495.0 13 1590 Q7 1685.0 13 1780 Q19 1875.0 13 1970 Q7 2065.0 13 2160 Q19 2255.0 13 2350 Q7 2445.0 13 2540"/></svg></div>
+<div class="bar"><div class="in"><span class="logo">Field Notes</span><span class="nav"><span>Science</span><span>Culture</span><span>Health</span></span></div><div class="progress" id="pg"></div></div>
+
+<article>
+  <div class="kicker">Culture · Identity</div>
+  <h1>On being a <em>gay man</em></h1>
+  <p class="dek" style="margin-bottom:34px;padding-bottom:28px;border-bottom:1px solid var(--line)">A short essay on growing up, finding your people, and the long road to being yourself.</p>
+
+  <div class="prose">
+    <p>For most of the last century, being a gay man was treated as a <span class="rb">crime</span>. England and Wales decriminalized sex between men in 1967. For many people, that change felt like the first crack of light under a very heavy door.</p>
+
+    <p>Change in medicine came slowly. The World Health Organization followed in 1999, removing homosexuality from the International Classification of Diseases. For the men who had spent years being told something was wrong with them, the feeling of finally being <span class="rb">seen</span> is something many still talk about.</p>
+
+    <h2>A different kind of story</h2>
+    <p>Every gay man has his own version of growing up. For some it is quiet and <span class="rb">slow</span>, a feeling that takes years to put into words. For others it arrives all at once, in a single conversation they still remember perfectly.</p>
+
+    <p>What most of these stories share is a moment of <span class="rb">recognition</span>: the point where a vague sense of being different turns into something with a name, and then into something that feels like home.</p>
+
+    <h2>Finding your people</h2>
+    <p>Friendship sits at the center of it. The group chat, the friend who gets it without explanation, the dinner that runs three hours too long. These are the places where people stop performing and start <span class="rb">belonging</span>.</p>
+
+    <p>Community looks different for everyone. It might be a club, a sports team, a group of coworkers or just two people on a couch. What matters is that it feels <span class="rb">safe</span> enough to be fully yourself.</p>
+
+    <h2>What still matters</h2>
+    <p>There is still work to do, and plenty of people are still figuring things out. But the conversation keeps changing every time someone decides to be <span class="rb">honest</span> about who they are.</p>
+
+    <p>If you are somewhere in the middle of that story right now, take your time. There is no deadline, and there is no <span class="rb">wrong way</span> to arrive.</p>
+
+    <h2>A longer history</h2>
+    <div class="timeline">
+      <div><b>1895</b><span>Oscar Wilde was convicted of gross indecency in 1895.</span></div>
+      <div><b>1948</b><span>Alfred Kinsey published <em>Sexual Behavior in the Human Male</em> in 1948.</span></div>
+      <div><b>1952</b><span>Alan Turing was prosecuted for homosexual acts in 1952.</span></div>
+      <div><b>1969</b><span>The Stonewall uprising began in New York City in June 1969.</span></div>
+      <div><b>1970</b><span>The first Pride march in New York took place in 1970.</span></div>
+      <div><b>1973</b><span>The American Psychiatric Association removed homosexuality from the DSM in 1973.</span></div>
+      <div><b>1977</b><span>Harvey Milk was elected to the San Francisco Board of Supervisors in 1977.</span></div>
+      <div><b>1978</b><span>Gilbert Baker designed the rainbow flag in 1978.</span></div>
+      <div><b>1978</b><span>Harvey Milk was assassinated in San Francisco in 1978.</span></div>
+      <div><b>1980</b><span>Scotland passed a law decriminalizing sex between men in 1980.</span></div>
+      <div><b>1982</b><span>Northern Ireland decriminalized sex between men in 1982.</span></div>
+      <div><b>1989</b><span>Denmark became the first country to offer registered partnerships to same-sex couples in 1989.</span></div>
+      <div><b>1991</b><span>J. Michael Bailey and Richard Pillard published their landmark study of gay twins in 1991.</span></div>
+      <div><b>1996</b><span>Ray Blanchard and Anthony Bogaert described the fraternal birth order effect in 1996.</span></div>
+      <div><b>2001</b><span>The Netherlands became the first country to legalize same-sex marriage in 2001.</span></div>
+      <div><b>2003</b><span>Belgium legalized same-sex marriage in 2003.</span></div>
+      <div><b>2003</b><span>The US Supreme Court struck down state sodomy laws in <em>Lawrence v. Texas</em> in 2003.</span></div>
+      <div><b>2004</b><span>Massachusetts became the first US state to issue marriage licenses to same-sex couples in 2004.</span></div>
+      <div><b>2005</b><span>Canada legalized same-sex marriage nationwide in 2005.</span></div>
+      <div><b>2005</b><span>Spain legalized same-sex marriage in 2005.</span></div>
+      <div><b>2006</b><span>South Africa became the first country in Africa to legalize same-sex marriage in 2006.</span></div>
+      <div><b>2009</b><span>Sweden legalized same-sex marriage in 2009.</span></div>
+      <div><b>2009</b><span>Norway legalized same-sex marriage in 2009.</span></div>
+      <div><b>2009</b><span>The Matthew Shepard and James Byrd Jr. Hate Crimes Prevention Act was signed into law in 2009.</span></div>
+      <div><b>2010</b><span>Congress voted to repeal "Don't Ask, Don't Tell" in 2010.</span></div>
+      <div><b>2010</b><span>The Equality Act 2010 protects people in Great Britain from discrimination based on sexual orientation.</span></div>
+      <div><b>2010</b><span>Argentina became the first country in Latin America to legalize same-sex marriage in 2010.</span></div>
+      <div><b>2010</b><span>Portugal legalized same-sex marriage in 2010.</span></div>
+      <div><b>2010</b><span>Iceland legalized same-sex marriage in 2010.</span></div>
+      <div><b>2012</b><span>Denmark legalized same-sex marriage in 2012.</span></div>
+      <div><b>2013</b><span>The UK passed the Marriage (Same Sex Couples) Act in 2013.</span></div>
+      <div><b>2013</b><span>Alan Turing received a posthumous royal pardon in 2013.</span></div>
+      <div><b>2013</b><span>France legalized same-sex marriage in 2013.</span></div>
+      <div><b>2013</b><span>New Zealand legalized same-sex marriage in 2013.</span></div>
+      <div><b>2013</b><span>Uruguay legalized same-sex marriage in 2013.</span></div>
+      <div><b>2014</b><span>The first same-sex weddings in England and Wales took place in March 2014.</span></div>
+      <div><b>2015</b><span>Ireland became the first country to legalize same-sex marriage by popular vote in 2015.</span></div>
+      <div><b>2015</b><span>The US Supreme Court legalized same-sex marriage nationwide in <em>Obergefell v. Hodges</em> in 2015.</span></div>
+      <div><b>2015</b><span>Luxembourg legalized same-sex marriage in 2015.</span></div>
+      <div><b>2016</b><span>Colombia's Constitutional Court legalized same-sex marriage in 2016.</span></div>
+      <div><b>2017</b><span>Germany legalized same-sex marriage in 2017.</span></div>
+      <div><b>2017</b><span>Australia legalized same-sex marriage in 2017.</span></div>
+      <div><b>2017</b><span>Malta legalized same-sex marriage in 2017.</span></div>
+      <div><b>2019</b><span>Taiwan became the first place in Asia to legalize same-sex marriage in 2019.</span></div>
+      <div><b>2019</b><span>A 2019 study in <em>Science</em> analyzed the DNA of more than 470,000 people and found no single "gay gene."</span></div>
+      <div><b>2019</b><span>Austria legalized same-sex marriage in 2019.</span></div>
+      <div><b>2019</b><span>Ecuador legalized same-sex marriage in 2019.</span></div>
+      <div><b>2020</b><span>The US Supreme Court ruled in <em>Bostock v. Clayton County</em> in 2020 that federal law protects gay workers from being fired for their sexual orientation.</span></div>
+      <div><b>2020</b><span>Costa Rica legalized same-sex marriage in 2020.</span></div>
+      <div><b>2021</b><span>Switzerland voted to legalize same-sex marriage in a referendum in 2021.</span></div>
+      <div><b>2022</b><span>Chile's same-sex marriage law took effect in 2022.</span></div>
+      <div><b>2022</b><span>Cuba approved same-sex marriage in a referendum in 2022.</span></div>
+      <div><b>2023</b><span>Andorra legalized same-sex marriage in 2023.</span></div>
+      <div><b>2024</b><span>Gallup found that 9.3% of US adults identified as LGBTQ+ in 2024.</span></div>
+      <div><b>2024</b><span>Estonia legalized same-sex marriage in 2024.</span></div>
+      <div><b>2024</b><span>Greece legalized same-sex marriage in 2024.</span></div>
+      <div><b>2025</b><span>Thailand's marriage equality law took effect in 2025.</span></div>
+    </div>
+  </div>
+
+  <div class="rainbow"></div>
+  <div class="tags" style="border-top:0"><span>Science</span><span>LGBTQ+</span><span>Genetics</span><span>Health</span><span>History</span></div>
+</article>
+
+<footer><span>© 2026 Field Notes</span><span>Science · Culture · Health</span></footer>
+
+<script>
+  const pg=document.getElementById('pg');
+  addEventListener('scroll',()=>{const h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+</script>
+</body>
+</html>
